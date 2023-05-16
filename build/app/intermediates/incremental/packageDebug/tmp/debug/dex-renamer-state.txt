@@ -1,0 +1,4 @@
+#Tue May 16 23:02:08 BDT 2023
+base.0=F\:\\Flattur App\\M-Box-Login-UI\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
