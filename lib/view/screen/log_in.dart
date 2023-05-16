@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lgoin_ui/view/widget/input_form.dart';
 
 class LogInScreen extends StatelessWidget {
   const LogInScreen({Key? key}) : super(key: key);
@@ -60,7 +61,15 @@ class LogInScreen extends StatelessWidget {
               const SizedBox(
                 height: 40,
               ),
-
+              InputForm(
+                hintText: 'Email',
+                prefixIcon: const Icon(Icons.email),
+              ),
+              InputForm(
+                hintText: 'Password',
+                prefixIcon: const Icon(Icons.lock),
+                suffixIcon: const Icon(Icons.remove_red_eye),
+              )
             ],
           ),
         ),
