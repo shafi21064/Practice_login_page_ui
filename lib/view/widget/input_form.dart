@@ -1,12 +1,10 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 
 class InputForm extends StatelessWidget {
-  String hintText;
+  final String hintText;
   final Widget? prefixIcon, suffixIcon;
 
-  InputForm(
+  const InputForm(
       {Key? key,
       required this.hintText,
       required this.prefixIcon,
@@ -16,7 +14,7 @@ class InputForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      padding: const EdgeInsets.only(top: 10,right: 20, left: 20),
       child: TextFormField(
         decoration: InputDecoration(
             hintText: hintText,

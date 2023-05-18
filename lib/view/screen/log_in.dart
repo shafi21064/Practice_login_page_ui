@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:lgoin_ui/view/widget/button.dart';
+import 'package:lgoin_ui/view/widget/button_text.dart';
 import 'package:lgoin_ui/view/widget/input_form.dart';
 
 class LogInScreen extends StatelessWidget {
@@ -9,7 +11,7 @@ class LogInScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          padding: const EdgeInsets.all(16),
+          padding: const EdgeInsets.all(20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -61,14 +63,32 @@ class LogInScreen extends StatelessWidget {
               const SizedBox(
                 height: 40,
               ),
-              InputForm(
+              const InputForm(
                 hintText: 'Email',
-                prefixIcon: const Icon(Icons.email),
+                prefixIcon: Icon(Icons.email),
               ),
-              InputForm(
+              const InputForm(
                 hintText: 'Password',
-                prefixIcon: const Icon(Icons.lock),
-                suffixIcon: const Icon(Icons.remove_red_eye),
+                prefixIcon: Icon(Icons.lock),
+                suffixIcon: Icon(Icons.remove_red_eye),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: const [
+                  ButtonText(
+                    color: Colors.black,
+                    buttonTxt: 'Forgot Password?',
+                    txtSize: 13,
+                  ),
+                ],
+              ),
+              const Button(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children:const [
+                  Text('Don\'t have any account?' ),
+                  ButtonText(buttonTxt: 'Sign Up',txtSize: 15,color: Color(0xffe1480d),)
+                ],
               )
             ],
           ),
